@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tư vấn mua xe | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Gửi yêu cầu tư vấn mua xe theo nhu cầu và ngân sách (bản demo lưu trên trình duyệt).">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/tuvan.css">
+</head>
+<body>
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../trangchu.html">Trang chủ</a></li><li>Tư vấn mua xe</li></ol></nav>
+        <h1>Nhận tư vấn miễn phí</h1>
+        <p>Cho chúng tôi biết nhu cầu và ngân sách, bản demo sẽ ghi nhận yêu cầu của bạn trên trình duyệt.</p>
+      </div>
+    </section>
+    <section class="form-page">
+      <div class="container advice-layout">
+        <form class="form-card" id="adviceForm" novalidate>
+          <h2>Thông tin của bạn</h2>
+          <div class="grid-2">
+            <div class="field"><label for="aName">Họ và tên *</label><input class="input" id="aName" type="text" autocomplete="name"></div>
+            <div class="field"><label for="aPhone">Số điện thoại *</label><input class="input" id="aPhone" type="tel" autocomplete="tel"></div>
+            <div class="field full"><label for="aEmail">Email *</label><input class="input" id="aEmail" type="email" autocomplete="email"></div>
+            <div class="field"><label for="aCar">Xe quan tâm</label><select class="input" id="aCar"><option value="">Chưa xác định</option></select></div>
+            <div class="field"><label for="aBudget">Khoảng ngân sách *</label>
+              <select class="input" id="aBudget"><option value="">Chọn ngân sách</option><option>Dưới 500 triệu</option><option>500 triệu – 1 tỷ</option><option>1 – 2 tỷ</option><option>Trên 2 tỷ</option></select></div>
+            <div class="field full"><label for="aContent">Nội dung cần tư vấn *</label><textarea class="input" id="aContent" maxlength="500"></textarea></div>
+          </div>
+          <button class="btn btn--primary" type="submit" style="margin-top:20px;width:100%">Gửi yêu cầu tư vấn</button>
+          <p class="note" style="margin-top:10px">Yêu cầu chỉ được lưu trong trình duyệt này, không gửi tới máy chủ.</p>
+        </form>
+        <aside class="form-card">
+          <h2>Kênh liên hệ mẫu</h2>
+          <p style="margin-bottom:14px"><i class="fa-solid fa-phone" style="color:var(--blue)"></i> Hotline mẫu: 0900 000 000</p>
+          <a class="btn btn--outline" href="tel:0900000000"><i class="fa-solid fa-phone"></i> Gọi điện (số mẫu)</a>
+          <h2 style="margin-top:28px">Yêu cầu đã gửi (demo)</h2>
+          <div id="adviceList"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/tuvan.js"></script>
+</body>
+</html>

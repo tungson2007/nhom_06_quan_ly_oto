@@ -1,0 +1,5 @@
+/* NHOM06 - tuvan.css */
+.advice-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
+.advice-item { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.advice-item strong { color: var(--blue); }
+@media (max-width: 992px) { .advice-layout { grid-template-columns: 1fr; } }

@@ -1,0 +1,18 @@
+/* NHOM06 - khuyenmai.css */
+.promo-banner { background: linear-gradient(135deg, #0B1220, #1d3a7a) center / cover; color: #fff; padding: 56px 0 64px; }
+.promo-banner h1 { color: #fff; font-size: clamp(30px, 5vw, 46px); font-weight: 800; margin: 12px 0 8px; }
+.promo-banner p { color: #CBD5E1; margin-bottom: 20px; }
+.promo-filters { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 16px; align-items: end; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.promos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.promo { background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; transition: var(--ease); }
+.promo:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.promo.is-ended { opacity: .75; }
+.promo__media { aspect-ratio: 16 / 9; background: #E5E7EB; overflow: hidden; }
+.promo__media img { width: 100%; height: 100%; object-fit: cover; }
+.promo__body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.promo__discount { color: var(--blue); font-weight: 700; }
+.promo__time { font-size: 13px; color: var(--text-2); }
+.promo__actions { display: flex; gap: 8px; margin-top: auto; padding-top: 8px; flex-wrap: wrap; }
+.cond-list { list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+@media (max-width: 992px) { .promos { grid-template-columns: repeat(2, 1fr); } .promo-filters { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .promos, .promo-filters { grid-template-columns: 1fr; } }

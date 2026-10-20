@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết xe | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Xem thư viện ảnh, thông số, mô tả và đặt mua hoặc nhận tư vấn cho mẫu xe bạn quan tâm.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/chitietxe.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="container" style="padding-top:24px">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb breadcrumb--light" id="breadcrumb">
+        <li><a href="../trangchu.html">Trang chủ</a></li><li><a href="danhsachxe.html">Danh sách xe</a></li><li>Chi tiết</li>
+      </ol></nav>
+    </div>
+    <div id="detailRoot"></div>
+  </main>
+
+  <!-- Lightbox xem ảnh lớn -->
+  <div class="modal lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+    <button class="icon-btn lb-btn lb-close" id="lbClose" type="button" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/chitietxe.js"></script>
+</body>
+</html>

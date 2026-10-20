@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NHOM06 — DRIVE YOUR FUTURE | Khám phá chiếc xe dành cho bạn</title>
+  <meta name="description" content="NHOM06: website mô phỏng kinh doanh ô tô. Tìm xe, đặt mua và nhận tư vấn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/trangchu.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" style="background-image:url('images/khuyenmai.jpg')"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">NHOM06 — DRIVE YOUR FUTURE</p>
+        <h1>KHÁM PHÁ CHIẾC XE DÀNH CHO BẠN</h1>
+        <p class="hero__desc">Khám phá những mẫu xe phù hợp với phong cách sống, nhu cầu và ngân sách của bạn.</p>
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="trang/danhsachxe.html">Khám phá danh sách xe</a>
+          <a class="btn btn--ghost-light" href="trang/dangtin.html">Đăng tin</a>
+        </div>
+        <ul class="hero__stats">
+      </div>
+    </section>
+
+    <!-- TÌM KIẾM NHANH -->
+    <section class="container">
+      <form class="quick-search" id="quickSearch" aria-label="Tìm xe nhanh">
+        <div class="field"><label for="qsKeyword">Từ khóa</label><input class="input" id="qsKeyword" type="text" placeholder="Tên xe..."></div>
+        <div class="field"><label for="qsBrand">Thương hiệu</label><select class="input" id="qsBrand"><option value="">Tất cả</option></select></div>
+        <div class="field"><label for="qsType">Loại xe</label><select class="input" id="qsType"><option value="">Tất cả</option></select></div>
+        <div class="field"><label for="qsPrice">Khoảng giá</label>
+          <select class="input" id="qsPrice">
+            <option value="">Tất cả</option>
+            <option value="0-500000000">Dưới 500 triệu</option>
+            <option value="500000000-1000000000">500 triệu – 1 tỷ</option>
+            <option value="1000000000-2000000000">1 – 2 tỷ</option>
+            <option value="2000000000-">Trên 2 tỷ</option>
+          </select></div>
+        <button class="btn btn--primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Tìm xe</button>
+      </form>
+    </section>
+
+    <!-- DANH MỤC -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head"><div><h2 class="section__title">Danh mục xe</h2><p class="section__sub">Chọn dòng xe phù hợp với nhu cầu của bạn</p></div></div>
+        <div class="cats" id="categories"></div>
+      </div>
+    </section>
+
+    <!-- XE NỔI BẬT -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div><h2 class="section__title">Xe nổi bật</h2><p class="section__sub">Giá và thông số là dữ liệu minh họa</p></div>
+          <a class="btn btn--outline" href="trang/danhsachxe.html">Xem tất cả xe <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="grid-cars" id="featuredCars"></div>
+      </div>
+    </section>
+
+    <!-- THƯƠNG HIỆU -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head"><div><h2 class="section__title">Thương hiệu</h2><p class="section__sub">Nhấn để xem các xe của hãng</p></div></div>
+        <div class="brands" id="brandList"></div>
+      </div>
+    </section>
+
+    <!-- KHUYẾN MÃI -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div><h2 class="section__title">Khuyến mãi nổi bật</h2><p class="section__sub">Chương trình minh họa của dự án demo</p></div>
+          <a class="btn btn--outline" href="trang/khuyenmai.html">Tất cả khuyến mãi</a>
+        </div>
+        <div class="promos" id="promoList"></div>
+      </div>
+    </section>
+
+    <!-- TIN TỨC -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div><h2 class="section__title">Tin tức &amp; đánh giá xe</h2></div>
+          <a class="btn btn--outline" href="trang/tintuc.html">Xem thêm</a>
+        </div>
+        <div class="news" id="newsList"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <h2>Bạn đang tìm chiếc xe tiếp theo của mình?</h2>
+        <div class="hero__btns">
+          <a class="btn btn--primary" href="trang/danhsachxe.html">Khám phá xe</a>
+          <a class="btn btn--ghost-light" href="trang/tuvan.html">Nhận tư vấn miễn phí</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/trangchu.js"></script>
+</body>
+</html>

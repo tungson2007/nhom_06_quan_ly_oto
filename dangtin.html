@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng tin bán xe | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Đăng tin bán xe của bạn: điền thông tin xe, giá mong muốn và ghi chú (bản demo lưu trên trình duyệt).">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dangtin.css">
+</head>
+<body>
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../trangchu.html">Trang chủ</a></li><li>Đăng tin</li></ol></nav>
+        <h1>Đăng tin bán xe</h1>
+        <p>Điền thông tin chiếc xe bạn muốn bán. Tin chỉ được lưu trong trình duyệt .</p>
+      </div>
+    </section>
+    <section class="form-page">
+      <div class="container post-layout">
+        <aside class="form-card">
+          <div class="post-illu"><img src="../images/dangtin.jpg" alt="Đăng tin bán xe" aria-hidden="true"><i class="fa-solid fa-car-side"></i></div>
+          <h2>Quy trình đăng tin</h2>
+          <ol class="steps">
+            <li><strong>Điền thông tin xe</strong><span>Hãng, dòng, phiên bản, năm, số km.</span></li>
+            <li><strong>Nhập giá mong muốn</strong><span>Đơn vị triệu đồng.</span></li>
+            <li><strong>Gửi tin</strong><span>Nhận mã tin để theo dõi trong bản demo.</span></li>
+          </ol>
+        </aside>
+        <form class="form-card" id="postForm" novalidate>
+          <h2>Thông tin xe</h2>
+          <div class="grid-2">
+            <div class="field"><label for="pBrand">Hãng xe *</label><select class="input" id="pBrand"><option value="">Chọn hãng</option></select></div>
+            <div class="field"><label for="pModel">Dòng xe *</label><input class="input" id="pModel" type="text"></div>
+            <div class="field"><label for="pVersion">Phiên bản</label><input class="input" id="pVersion" type="text"></div>
+            <div class="field"><label for="pYear">Năm sản xuất *</label><input class="input" id="pYear" type="number" step="1"></div>
+            <div class="field"><label for="pCondition">Tình trạng *</label>
+              <select class="input" id="pCondition"><option value="">Chọn tình trạng</option><option>Xe mới</option><option>Xe đã qua sử dụng</option></select></div>
+            <div class="field"><label for="pKm">Số km đã đi *</label><input class="input" id="pKm" type="number" min="0" step="1"></div>
+            <div class="field full"><label for="pPrice">Giá muốn bán (triệu đồng) *</label><input class="input" id="pPrice" type="number" min="1" step="1"></div>
+            <div class="field full"><label for="pNote">Ghi chú</label><textarea class="input" id="pNote" maxlength="500"></textarea></div>
+          </div>
+          <button class="btn btn--primary" type="submit" style="margin-top:20px;width:100%">Gửi tin</button>
+        </form>
+      </div>
+      <div class="container" style="margin-top:24px"><div class="form-card"><h2>Tin đã đăng </h2><div id="postList"></div></div></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/dangtin.js"></script>
+</body>
+</html>

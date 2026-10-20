@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Đăng nhập hoặc đăng ký tài khoản mô phỏng trên trình duyệt cho website NHOM06.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dangnhap.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="form-page">
+    <div class="container"><div class="form-card auth-card">
+      <div id="authGuest">
+        <div class="tabs" role="tablist">
+          <button class="tab active" type="button" data-tab="tabLogin" role="tab">Đăng nhập</button>
+          <button class="tab" type="button" data-tab="tabRegister" role="tab">Đăng ký</button>
+        </div>
+        <form class="tab-panel active" id="tabLogin" novalidate>
+          <div class="field"><label for="lEmail">Email</label><input class="input" id="lEmail" type="email" autocomplete="email"></div>
+          <div class="field" style="margin-top:14px"><label for="lPass">Mật khẩu (mẫu)</label><input class="input" id="lPass" type="password" autocomplete="off"></div>
+          <button class="btn btn--primary" type="submit" style="margin-top:18px;width:100%">Đăng nhập</button>
+        </form>
+
+        <form class="tab-panel" id="tabRegister" novalidate>
+          <div class="field"><label for="rName">Họ và tên</label><input class="input" id="rName" type="text" autocomplete="name"></div>
+          <div class="field" style="margin-top:14px"><label for="rEmail">Email</label><input class="input" id="rEmail" type="email" autocomplete="email"></div>
+          <div class="field" style="margin-top:14px"><label for="rPass">Mật khẩu (tối thiểu 6 ký tự)</label><input class="input" id="rPass" type="password" autocomplete="off"></div>
+          <div class="field" style="margin-top:14px"><label for="rPass2">Nhập lại mật khẩu</label><input class="input" id="rPass2" type="password" autocomplete="off"></div>
+          <button class="btn btn--primary" type="submit" style="margin-top:18px;width:100%">Tạo tài khoản mô phỏng</button>
+        </form>
+      </div>
+
+      <div id="authUser" hidden>
+        <div class="success-box"><i class="fa-solid fa-circle-check"></i></div>
+        <h2 style="text-align:center" id="welcome"></h2>
+        <p class="note" style="text-align:center;margin:6px 0 18px">Bạn đang đăng nhập ở chế độ mô phỏng.</p>
+        <a class="btn btn--primary" href="danhsachxe.html" style="width:100%">Xem danh sách xe</a>
+        <button class="btn btn--outline" type="button" id="logoutBtn" style="width:100%;margin-top:10px">Đăng xuất</button>
+      </div>
+    </div></div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/dangnhap.js"></script>
+</body>
+</html>

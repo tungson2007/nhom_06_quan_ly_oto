@@ -1,0 +1,12 @@
+/* NHOM06 - datxe.css : trang đặt mua + lịch sử đơn */
+.order-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
+.summary { position: sticky; top: calc(var(--header-h) + 16px); }
+.summary__media { aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: #E5E7EB; margin-bottom: 14px; }
+.summary__media img { width: 100%; height: 100%; object-fit: cover; }
+.sum-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; font-size: 14px; border-bottom: 1px dashed var(--border); }
+.sum-row--total { font-size: 18px; font-weight: 800; border: 0; padding-top: 14px; color: var(--navy); }
+.sum-row--total span:last-child { color: var(--blue); }
+.modal__actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; flex-wrap: wrap; }
+.success-icon { width: 64px; height: 64px; border-radius: 50%; background: #DCFCE7; color: var(--success); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 12px; }
+.order-code { font-size: 26px; font-weight: 800; color: var(--blue); text-align: center; margin: 4px 0 16px; }
+@media (max-width: 992px) { .order-layout { grid-template-columns: 1fr; } .summary { position: static; order: -1; } }

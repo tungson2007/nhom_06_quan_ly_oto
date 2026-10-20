@@ -1,0 +1,46 @@
+/* ==========================================================
+   NHOM06 - chitietxe.css
+   ========================================================== */
+.detail { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; padding: 24px 0 48px; align-items: start; }
+@media (max-width: 992px) { .detail { grid-template-columns: 1fr; } }
+
+/* Gallery */
+.gallery__main { position: relative; aspect-ratio: 16 / 10; border-radius: var(--radius); overflow: hidden; background: #E5E7EB; cursor: zoom-in; border: 0; width: 100%; padding: 0; display: block; }
+.gallery__main img { width: 100%; height: 100%; object-fit: cover; }
+.gallery__zoom { position: absolute; right: 12px; bottom: 12px; background: rgba(11, 18, 32, .7); color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 13px; }
+.gallery__thumbs { display: flex; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 4px; }
+.thumb { flex: 0 0 96px; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; border: 2px solid transparent; padding: 0; cursor: pointer; background: #E5E7EB; opacity: .75; transition: var(--ease); }
+.thumb.active { border-color: var(--blue); opacity: 1; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb .img-ph i { font-size: 18px; } .thumb .img-ph span { display: none; } .thumb .img-ph { min-height: 0; }
+
+/* Thông tin bên phải */
+.info { position: sticky; top: calc(var(--header-h) + 16px); display: flex; flex-direction: column; gap: 14px; }
+.info__brand { color: var(--blue); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; font-size: 13px; }
+.info h1 { font-size: clamp(26px, 3.5vw, 34px); font-weight: 800; }
+.info__price { font-size: 30px; font-weight: 800; color: var(--navy); }
+.info__quick { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.info__quick div { background: var(--bg); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.info__quick i { color: var(--blue); margin-right: 6px; }
+.info__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.info__actions .btn--primary { grid-column: 1 / -1; }
+
+/* Tab nội dung */
+.detail-tabs { padding-bottom: 56px; }
+.spec-table { width: 100%; border-collapse: collapse; }
+.spec-table th, .spec-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+.spec-table th { width: 40%; color: var(--text-2); font-weight: 500; background: var(--bg); }
+.feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.feature-list li::before { content: "\2713"; color: var(--success); font-weight: 700; margin-right: 8px; }
+@media (max-width: 560px) { .feature-list { grid-template-columns: 1fr; } .info__quick { grid-template-columns: 1fr; } }
+
+/* Lightbox */
+.lightbox { background: rgba(11, 18, 32, .92); }
+.lb-stage { width: min(1000px, 90vw); aspect-ratio: 16 / 10; background: #1F2937; border-radius: 12px; overflow: hidden; }
+.lb-stage img { width: 100%; height: 100%; object-fit: contain; }
+.lb-stage .img-ph { min-height: 0; }
+.lb-btn { position: absolute; background: rgba(255, 255, 255, .15); }
+.lb-close { top: 16px; right: 16px; } .lb-prev { left: 16px; } .lb-next { right: 16px; }
+
+/* Cho phép cột grid co lại, không bị thumbnail đẩy tràn màn hình */
+.detail > *, .gallery { min-width: 0; }

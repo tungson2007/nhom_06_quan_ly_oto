@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danh sách xe | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Tìm kiếm, lọc và sắp xếp bộ sưu tập xe theo thương hiệu, loại xe, giá, năm sản xuất, nhiên liệu và hộp số.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/danhsachxe.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../trangchu.html">Trang chủ</a></li><li>Danh sách xe</li></ol></nav>
+        <h1>Khám phá bộ sưu tập xe</h1>
+        <p>Lọc theo nhiều điều kiện để tìm chiếc xe phù hợp. Giá và thông số là dữ liệu minh họa.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:32px">
+      <div class="container list-layout">
+
+        <!-- BỘ LỌC (desktop: sidebar, mobile: drawer) -->
+        <aside class="filters" id="filterPanel" aria-label="Bộ lọc xe">
+          <div class="filters__head">
+            <h2>Bộ lọc</h2>
+            <button class="icon-btn filters__close" id="filterClose" type="button" aria-label="Đóng bộ lọc"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <form id="filterForm" class="filters__form">
+            <div class="field"><label for="fKeyword">Tên xe hoặc từ khóa</label><input class="input" id="fKeyword" type="search" placeholder="Ví dụ: SUV, Honda..."></div>
+            <div class="field"><label for="fBrand">Thương hiệu</label><select class="input" id="fBrand"><option value="">Tất cả</option></select></div>
+            <div class="field"><label for="fType">Loại xe</label><select class="input" id="fType"><option value="">Tất cả</option></select></div>
+            <div class="field"><label for="fMin">Giá (triệu đồng)</label>
+              <div class="range"><input class="input" id="fMin" type="number" min="0" step="50" placeholder="Từ"><input class="input" id="fMax" type="number" min="0" step="50" placeholder="Đến" aria-label="Giá cao nhất (triệu đồng)"></div>
+              <span class="field__error" id="priceError" role="alert"></span>
+            </div>
+            <div class="field"><label for="fYear">Năm sản xuất (từ năm)</label><select class="input" id="fYear"><option value="">Tất cả</option></select></div>
+            <div class="field"><label for="fFuel">Nhiên liệu</label><select class="input" id="fFuel"><option value="">Tất cả</option></select></div>
+            <div class="field"><label for="fTrans">Hộp số</label><select class="input" id="fTrans"><option value="">Tất cả</option></select></div>
+            <div class="filters__btns">
+              <button class="btn btn--primary" id="filterApply" type="button">Áp dụng</button>
+              <button class="btn btn--outline" id="filterReset" type="button">Xóa bộ lọc</button>
+            </div>
+          </form>
+        </aside>
+        <div class="overlay" id="filterOverlay"></div>
+
+        <!-- KẾT QUẢ -->
+        <section class="results" aria-live="polite">
+          <div class="toolbar">
+            <div>
+              <button class="btn btn--outline btn--sm filter-open" id="filterOpen" type="button"><i class="fa-solid fa-sliders"></i> Bộ lọc</button>
+              <strong id="resultCount"></strong>
+            </div>
+            <div class="field" style="flex-direction:row;align-items:center;gap:8px">
+              <label for="fSort">Sắp xếp</label>
+              <select class="input" id="fSort" style="width:auto">
+                <option value="default">Mặc định</option>
+                <option value="price-asc">Giá tăng dần</option>
+                <option value="price-desc">Giá giảm dần</option>
+                <option value="name">Tên A–Z</option>
+                <option value="year-desc">Năm sản xuất mới nhất</option>
+              </select>
+            </div>
+          </div>
+          <div class="chips" id="activeChips"></div>
+          <div class="grid-cars" id="carGrid"></div>
+          <nav class="pagination" id="pagination" aria-label="Phân trang"></nav>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/danhsachxe.js"></script>
+</body>
+</html>

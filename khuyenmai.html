@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khuyến mãi | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Các chương trình ưu đãi minh họa dành cho hành trình mua xe mới, lọc theo trạng thái, thương hiệu và loại ưu đãi.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/khuyenmai.css">
+</head>
+<body>
+  <main>
+    <section class="promo-banner" style="background-image:url('../images/khmai.jpg')">
+      <div class="container promo-banner__inner">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../trangchu.html">Trang chủ</a></li><li>Khuyến mãi</li></ol></nav>
+        <h1>Ưu đãi , giảm giá bất ngờ </h1>
+        <a class="btn btn--primary" href="#promoList">Khám phá xe ưu đãi</a>
+      </div>
+    </section>
+
+    <section class="section" id="promoList">
+      <div class="container">
+        <div class="promo-filters" role="group" aria-label="Bộ lọc khuyến mãi">
+          <div class="field"><label for="fStatus">Trạng thái</label>
+            <select class="input" id="fStatus"><option value="">Tất cả</option><option value="ongoing">Đang diễn ra</option><option value="upcoming">Sắp diễn ra</option><option value="ended">Đã kết thúc</option></select></div>
+          <div class="field"><label for="fBrand">Thương hiệu</label><select class="input" id="fBrand"><option value="">Tất cả</option></select></div>
+          <div class="field"><label for="fKind">Loại ưu đãi</label><select class="input" id="fKind"><option value="">Tất cả</option></select></div>
+          <button class="btn btn--outline" type="button" id="resetFilters">Xóa bộ lọc</button>
+        </div>
+        <p class="note" id="promoCount" style="margin:16px 0" aria-live="polite"></p>
+        <div class="promos" id="promoGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="promoModal" role="dialog" aria-modal="true" aria-label="Chi tiết khuyến mãi"><div class="modal__box" id="promoModalBody"></div></div>
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/khuyenmai.js"></script>
+</body>
+</html>

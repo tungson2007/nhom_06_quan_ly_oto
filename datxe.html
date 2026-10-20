@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt mua xe | NHOM06 — DRIVE YOUR FUTURE</title>
+  <meta name="description" content="Điền thông tin, chọn phương thức thanh toán mô phỏng và xác nhận đơn đặt mua xe (bản demo trên trình duyệt).">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/datxe.css">
+</head>
+<body>
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="../trangchu.html">Trang chủ</a></li><li><a href="danhsachxe.html">Danh sách xe</a></li><li>Đặt mua xe</li></ol></nav>
+        <h1>Đặt mua xe</h1>
+      </div>
+    </section>
+
+    <section class="form-page">
+      <div class="container order-layout">
+        <form class="form-card" id="orderForm" novalidate>
+          <h2>1. Xe và số lượng</h2>
+          <div class="grid-2">
+            <div class="field full"><label for="oCar">Xe đã chọn</label><select class="input" id="oCar"></select></div>
+            <div class="field"><label for="oQty">Số lượng xe</label><input class="input" id="oQty" type="number" min="1" step="1" value="1"></div>
+          </div>
+
+          <h2 style="margin-top:28px">2. Thông tin khách hàng</h2>
+          <div class="grid-2">
+            <div class="field"><label for="oName">Họ và tên *</label><input class="input" id="oName" type="text" autocomplete="name"></div>
+            <div class="field"><label for="oPhone">Số điện thoại *</label><input class="input" id="oPhone" type="tel" autocomplete="tel" placeholder="0901234567"></div>
+            <div class="field"><label for="oEmail">Email *</label><input class="input" id="oEmail" type="email" autocomplete="email"></div>
+            <div class="field"><label for="oProvince">Tỉnh/thành phố *</label><select class="input" id="oProvince"><option value="">Chọn tỉnh/thành</option></select></div>
+            <div class="field full"><label for="oAddress">Địa chỉ *</label><input class="input" id="oAddress" type="text" autocomplete="street-address"></div>
+            <div class="field full"><label for="oNote">Ghi chú</label><textarea class="input" id="oNote" maxlength="300"></textarea></div>
+          </ddiv>
+          <button class="btn btn--primary" type="submit" style="margin-top:20px;width:100%">Kiểm tra và đặt mua</button>
+        </form>
+
+        <aside class="form-card summary" aria-label="Tóm tắt đơn hàng">
+          <h2>Tóm tắt đơn hàng</h2>
+          <div id="summaryBody"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="modal__box" id="orderModalBody"></div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/datxe.js"></script>
+</body>
+</html>
